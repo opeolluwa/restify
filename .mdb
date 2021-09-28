@@ -1,0 +1,11 @@
+{
+  "packageManager": "npm",
+  "projectName": "api",
+  "hash": "ff7dd3e1",
+  "backend": {
+    "platform": "php7.4"
+  },
+  "meta": {
+    "type": "backend"
+  }
+}
