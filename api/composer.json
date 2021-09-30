@@ -1,0 +1,7 @@
+{
+    "require":{
+        "swiftmailer/swiftmailer" :"^6.0",
+        "firebase/php-jwt": "^5.4",
+        "symfony/mailer": "^5.3"
+    }
+}
