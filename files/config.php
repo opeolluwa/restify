@@ -97,7 +97,7 @@ $sticky_navbar = true;
 
 
 // max upload file size
-$max_upload_size_bytes = 5000;
+$max_upload_size_bytes = 500000;
 
 // Possible rules are 'OFF', 'AND' or 'OR'
 // OFF => Don't check connection IP, defaults to OFF
