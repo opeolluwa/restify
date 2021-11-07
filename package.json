@@ -9,6 +9,11 @@
   "author": "Adeoye Adefemi Opeoluwa (Drizzle)",
   "license": "ISC",
   "dependencies": {
-    "mysql": "^2.18.1"
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3-rc.0",
+    "sequelize": "^6.9.0"
   }
 }
