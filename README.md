@@ -1,4 +1,4 @@
-# Templatico REST API
+# Templatico API
 
 ## Overview 
 _A serverside script written in JavaScript to help developer to quickly scaffold serverside projects._
