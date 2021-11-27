@@ -1,19 +1,38 @@
 {
-  "name": "api",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "api to my portfolio server and database",
+  "description": "An extension of nethbooks -- a student companion web app to serve content and study resources to students",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js"
   },
-  "author": "Adeoye Adefemi Opeoluwa (Drizzle)",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opeolluwa/portfolio"
+  },
+  "keywords": [
+    "MEVN"
+  ],
+  "author": "Adeoye Adefemi Opeoluwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opeolluwa/portfolio/issues"
+  },
+  "homepage": "https://github.com/opeolluwa/portfolio#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "imagekit": "^3.2.2",
+    "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
-    "mysql2": "^2.3.3-rc.0",
-    "sequelize": "^6.9.0"
+    "mysql2": "^2.3.2",
+    "nodemailer": "^6.7.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
