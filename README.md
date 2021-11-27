@@ -48,8 +48,6 @@ Enter the following command in your terminal
   
 
 
-  ### Guide 
-  1. Database 
   
   
 
