@@ -126,7 +126,6 @@ CREATE TABLE `skills` (
 
 LOCK TABLES `skills` WRITE;
 /*!40000 ALTER TABLE `skills` DISABLE KEYS */;
-INSERT INTO `skills` VALUES (1,'Bootstrap','https://getbootstrap.com','CSS framework by Twitter','https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg'),(2,'CSS','https://www.w3schools.com/css/','Cascading Stylesheet','https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg'),(3,'Git','https://git-scm.com/','Version Controll System','https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg'),(4,'HTML','https://www.w3.org/html/','Hypertext Markup Language','https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg'),(5,'JavaScript','https://developer.mozilla.org/en-US/docs/Web/JavaScript','Scripting Language','https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg'),(6,'MySQL','https://www.mysql.com/','SQL Database','https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg'),(7,'VueJs','https://vuejs.org/','Prograessive JavaScript Framework','https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg');
 /*!40000 ALTER TABLE `skills` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -139,4 +138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-27 14:26:26
+-- Dump completed on 2021-11-27 14:36:17
