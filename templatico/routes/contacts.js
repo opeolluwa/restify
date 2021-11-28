@@ -1,8 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const cors = require('cors')
-require('dotenv').config()
-const database = require("./../config/config.database")
+const User = require('../lib/class/user')
 
 
 router.use(cors())

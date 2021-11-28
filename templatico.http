@@ -1,0 +1,24 @@
+###config
+@BASE_URL = "http://localhost:3000"
+###Base test
+GET {{BASE_URL}}
+
+###Mails test
+POST {{BASE_URL}}/mails/send
+Content-Type: application/json
+
+{ "email" : "templatico@mailer.com",
+ "name": "Node APi", 
+ "subject": "Test case",
+"message": "ignition started"
+   } 
+
+
+### contacts
+POST {{BASE_URL}}/contacts/add
+Content-Type: application/json
+
+{ "email" : "templatico@mailer.com",
+ "name": "Node APi", 
+ "email": "Test case",
+   } 

@@ -11,7 +11,7 @@ router.use(cors())
 
 //send route
 router.post('/send', (req, res) => {
-    const { email, name, subject, message } = req.body.payload
+    const { email, name, subject, message } = req.body
 
     // pass data to node mailer 
     // store a copy on database
@@ -20,8 +20,8 @@ router.post('/send', (req, res) => {
 
 
 
-    console.log(req.body.payload)
-    return res.send({ status: "Message sent!", errors: null })
+    console.log(req.body)
+     res.send({ status: "Message sent!", errors: null, email, name, subject, message})
 })
 
 //return all messsage

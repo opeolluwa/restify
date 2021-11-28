@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require('express')
-const PORT = process.env.PORT || 6000
+const PORT = process.env.PORT || 5000
 const app = express()
 const cors = require('cors')
 
@@ -20,7 +20,12 @@ app.use("/projects", projects)
 app.use("/contacts", contacts)
 // app.use("/auth", auth)
 
+app.get('/', (req, res)=>{
+    res.send(`Templatico server listening on port ${PORT}`)
+
+})
 
 app.listen(PORT, () => {
-    console.log(`Express server listening on port ${PORT}`)
+    console.log(`Templatico API listening on port ${PORT}`)
+
 });
