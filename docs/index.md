@@ -1,22 +1,28 @@
 # TEMPLATICO
 
-## Overview
 
-_A serverside script written in Node.js to help developer to quickly scaffold serverside projects. especiall portfolio_
+
+## Overview
+Templatico is server script  written in [Node.js](https://nodejs.org) using [Express.js](https://express.js) framework, to help developers to quickly scaffold  APIs that can be consumed in web, desktop or mobile application interfaces <b/>
+The project was created with a developer portfolio in mind, but can be put to good use with minor configuration.
+
+
 
 ## NOTE:
-
 _This project is built using MySQL
 but it should well with any other RDMS_
 
+
+
 ### FEATURES
 
-- [] User Authentication
+- [] File manager
 - [] Blog Management
 - [] Managing Contacts
 - [] News letter authoring and management
 - [] Sending emails using templates
-- [] File manager
+- [] User Authentication
+
 
 ## INSTALLATION
 
