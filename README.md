@@ -22,6 +22,7 @@ but it should well with any other RDMS_
 - [] News letter authoring and management
 - [] Sending emails using templates
 - [] User Authentication
+- [] example interface with vue
 
 
 ## INSTALLATION
