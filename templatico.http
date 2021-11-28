@@ -1,10 +1,8 @@
-###config
-@BASE_URL = "http://localhost:3000"
-###Base test
-GET {{BASE_URL}}
+
+GET http://localhost:3000
 
 ###Mails test
-POST {{BASE_URL}}/mails/send
+POST http://localhost:3000/mails/send
 Content-Type: application/json
 
 { "email" : "templatico@mailer.com",
@@ -15,7 +13,7 @@ Content-Type: application/json
 
 
 ### contacts
-POST {{BASE_URL}}/contacts/add
+POST http://localhost:3000/contacts/add
 Content-Type: application/json
 
 { "email" : "templatico@mailer.com",
