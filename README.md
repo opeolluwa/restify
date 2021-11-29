@@ -16,13 +16,14 @@ but it should well with any other RDMS_
 
 ### FEATURES
 
-- [] File manager
-- [] Blog Management
-- [] Managing Contacts
-- [] News letter authoring and management
-- [] Sending emails using templates
-- [] User Authentication
-- [] example interface with vue
+- :grimacing: File manager ![0%](https://progress-bar.dev/0?title=planning)
+- Blog Management ![0%](https://progress-bar.dev/0?title=planning) :zany_face:
+- Managing Contacts ![12%](https://progress-bar.dev/12?title=in+progress)
+- News letter authoring and management
+- Sending emails using templates
+- User Authentication
+- example interface with vue ![60%](https://progress-bar.dev/60?title=in+progress)
+
 
 
 ## INSTALLATION
