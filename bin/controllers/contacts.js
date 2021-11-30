@@ -25,17 +25,18 @@ function add_contact(req, res) {
                     .catch(error => console.log(error))
                     .then(() => database.end());
             }
-            //infor user of existence
+            //inform user of existence if found
             else {
                 return res.send({ message: contact_email + " already exists" })
             }
         })
         .catch(console.log)
         .then(() => database.end());
+}
+
+function remove_contact(req, res) {
 
 }
 
-
-
 //export class 
-module.exports = { add_contact }
+module.exports = { add_contact, remove_contact }
