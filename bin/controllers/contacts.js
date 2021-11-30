@@ -2,7 +2,7 @@
 const database = require("../config/config.database")
 
 
-// get all contact
+// ALL CONTACT
 function all_contact(req, res) {
     database.promise().query("SELECT * FROM contacts")
         .then(([rows, fields]) => {
@@ -12,7 +12,7 @@ function all_contact(req, res) {
         .then(() => database.end());
 }
 
-
+//ADD CONTACT
 function add_contact(req, res) {
     //fetch data from pay load
     const { contact_email, contact_name, contact_phone } = req.body
@@ -70,6 +70,64 @@ function remove_contact(req, res) {
         .catch(error => console.log(error))
         .then(() => database.end());
 }
+
+
+
+//UPDATE CONTACT
+function update_contact(req, res) {
+    //fetch data from pay load
+    const { contact_email, contact_name, contact_phone } = req.body.fields
+
+    //check if user exists
+    database.promise()
+        .query("SELECT * FROM contacts WHERE LOWER(contact_email) =?", [contact_email])
+        .then(([rows, fields]) => {
+            //add user if not exist
+            if (!rows[0]) {
+                return res.status(404).send({ message: contact_email + " not found" })
+            }
+
+            //CASE EMAIL && phone
+            else if (contact_phone, contact_name) {
+                //check for existing fields from the payload
+                database.promise().query("UPDATE  contacts SET contact_phone = ?, contact_name = ? WHERE contact_email = ?", [contact_phone, contact_name,  contact_email])
+                    .then(([rows, fields]) => {
+                        return res.send({ message: contact_email + " name and phone successfully updated" })
+                    })
+                    .catch(error => console.log(error))
+                    .then(() => database.end());
+            }
+
+            //CASE EMAIL
+            else if (contact_phone) {
+                //check for existing fields from the payload
+                database.promise().query("UPDATE  contacts SET contact_phone = ? WHERE contact_email = ?", [contact_phone, contact_email])
+                    .then(([rows, fields]) => {
+                        return res.send({ message: contact_email + " name successfully updated" })
+                    })
+                    .catch(error => console.log(error))
+                    .then(() => database.end());
+            }
+
+            //CASE NAME
+            else if (contact_name) {
+                //check for existing fields from the payload
+                database.promise().query("UPDATE  contacts SET contact_phone = ? WHERE contact_email = ?", [contact_name, contact_email])
+                    .then(([rows, fields]) => {
+                        return res.send({ message: contact_email + " name successfully updated" })
+                    })
+                    .catch(error => console.log(error))
+                    .then(() => database.end());
+            }
+            //CASE EMAII
+            else {
+                return res.send({ error: "sorry mails cannot be changed" })
+            }
+        })
+        .catch(error => console.log(error))
+        .then(() => database.end());
+}
+
 
 //export class 
 module.exports = { all_contact, add_contact, remove_contact }
