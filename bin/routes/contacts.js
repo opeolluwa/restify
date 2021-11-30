@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const cors = require('cors')
 const { add_contact, remove_contact, all_contact } = require('../controllers/contacts')
-
+const validate_payload = require('../middleware/contact')
 
 
 router.use(cors())
@@ -14,7 +14,7 @@ router.get('/',
 router.get("/all", all_contact)
 
 //Add contact
-router.post("/add", add_contact)
+router.post("/add", /* validate_payload, */ add_contact)
 //remove contact
 router.post("/remove", remove_contact)
 
