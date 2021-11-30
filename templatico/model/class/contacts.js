@@ -20,10 +20,12 @@ class Contact {
 
     //check if user account exist using email
     email_exists(email) {
-        //check if user exists
-        database.promise().query("SELECT * FROM contacts")
+        // const { contact_email } = req.body
+
+        database.promise().query("SELECT * FROM contacts WHERE contact_email = ?", [email])
             .then(([rows, fields]) => {
-                console.log(rows);
+                 console.log(rows);
+                
             })
             .catch(error => error.message)
             .then(() => database.end());

@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
     console.log(
         rx.email_exists(email)
     )
-    res.send({ email, name, phone })
+   return  res.send({ email, name, phone })
 
 })
 
