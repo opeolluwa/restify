@@ -1,6 +1,35 @@
-import database from "../../config/config.database";
+const database = require("../../config/config.database");
+//init database trasaction
+database.connect(err => {
+    if (err) console.error('error connecting: ' + err.stack);
+    console.log('connected as id ' + database.threadId);
+});
+
+
 
 class Contact {
+    /*    //check for contact existence
+       constructor(name, phone, email) {
+           this.name = name;
+           this.email = email;
+           this.phone = phone
+       }
+    */
+
+
+
+    //check if user account exist using email
+    email_exists(email) {
+        //check if user exists
+        database.promise().query("SELECT * FROM contacts")
+            .then(([rows, fields]) => {
+                console.log(rows);
+            })
+            .catch(error => error.message)
+            .then(() => database.end());
+    }
+
+
     //add new contact
     add(name, email, phone) {
         const query = "INSERT (name, email, phone) into contacts VALUES (?,?,?)";

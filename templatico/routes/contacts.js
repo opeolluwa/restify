@@ -1,31 +1,42 @@
 const express = require('express')
 const router = express.Router()
 const cors = require('cors')
-const User = require('../lib/class/user')
+const Contact = require('../model/class/contacts')
+const database = require('../config/config.database')
+
+database.connect(err => {
+    if (err) console.error('error connecting: ' + err.stack);
+    console.log('connected as id ' + database.threadId);
+});
 
 
 router.use(cors())
-
 //default get all contacts
 router.get('/', (req, res) => {
-    database.connect(function (err) {
-        if (err) {
-            console.error('error connecting: ' + err.stack);
-            return;
-        }
-        console.log('connected as id ' + database.threadId);
-    });
+    //destructure request
+    const { contact_email: email, contact_name: name, contact_phone: phone } = req.body
 
+    const rx = new Contact();
+    console.log(
+        rx.email_exists(email)
+    )
+    res.send({ email, name, phone })
 
-    database.query("SELECT * FROM contacts", (err, rows) => {
-        if (err) return res.json({ rows: null, errors: err.message, })
-        else return res.json({ rows, errors: null })
-    })
 })
 
 //Add contact
 router.post("/add", (req, res) => {
-    res.send({ message: "add contact" })
+    //init database trassaction
+
+    const { email, name, phone } = req.body
+
+
+    //check if user exist  contact
+    const user = new Contact()
+    user.email_exists(email)
+
+    res.send({ message: "add contact", email, name, phone, user })
+
 })
 
 

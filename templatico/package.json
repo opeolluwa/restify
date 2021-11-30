@@ -4,7 +4,7 @@
   "description": "An extension of nethbooks -- a student companion web app to serve content and study resources to students",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",

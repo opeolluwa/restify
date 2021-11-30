@@ -15,8 +15,20 @@ Content-Type: application/json
 ### contacts
 POST http://localhost:3000/contacts/add
 Content-Type: application/json
+ {
+    "contact_name": "templatico",
+    "contact_email": "templatico@mailer.com",
+    "contact_phone": "+123456789"
+  }
 
-{ "email" : "templatico@mailer.com",
- "name": "Node APi", 
- "email": "Test case",
-   } 
+
+
+### contacts
+GET http://localhost:3000/contacts
+Content-Type: application/json
+
+ {
+    "contact_name": "templatico",
+    "contact_email": "templatico@mailer.com",
+    "contact_phone": "+123456789"
+  }
