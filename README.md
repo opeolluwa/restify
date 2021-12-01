@@ -1,9 +1,9 @@
-# TEMPLATICO
+# TEMPLATICO :rocket:
 
 
 
 ## Overview
-Templatico is server script  written in [Node.js](https://nodejs.org) using [Express.js](https://express.js) framework, to help developers to quickly scaffold  APIs that can be consumed in web, desktop or mobile application interfaces
+Templatico is server script  written in [Node.js](https://nodejs.org) using [Express.js](https://expressjs.com) framework, to help developers to quickly scaffold  APIs that can be consumed in web, desktop or mobile application interfaces 
 The project was created with a developer portfolio in mind, but can be put to good use with minor configuration.
 
 
@@ -16,13 +16,14 @@ but it should well with any other RDMS_
 
 ### FEATURES
 
-- [] File manager
-- [] Blog Management
-- [] Managing Contacts
-- [] News letter authoring and management
-- [] Sending emails using templates
-- [] User Authentication
-- [] example interface with vue
+- File manager ![0%](https://progress-bar.dev/0?title=planning)
+- Blog Management ![0%](https://progress-bar.dev/0?title=planning)
+- Managing Contacts ![12%](https://progress-bar.dev/12?title=in+progress)
+- News letter authoring and management
+- Sending emails using templates
+- User Authentication
+- example interface with vue ![60%](https://progress-bar.dev/60?title=in+progress)
+
 
 
 ## INSTALLATION
