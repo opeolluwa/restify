@@ -4,3 +4,4 @@ const validate_email = (email: string): boolean => email_validation.validate(ema
 
 module.export = validate_email
 
+

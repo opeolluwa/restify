@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "rootDir": "bin/utils",
-    "target": "esnext"
+    "target": "esnext",
+    "removeComments" : false
   }
 }
