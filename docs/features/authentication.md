@@ -1,9 +1,14 @@
 # Authentication
 
-- The _auth_ endpoint is used for user authentication, user registration and user authorization
-- The table is named **_users_** and it contains the following fields
+## Overview
 
-## Database table
+- The _auth_ endpoint is used for user authentication, user registration and user authorization, in develiopment enviroment, the users table contain the following fields
+
+```curl
+http://localhost:3000/auth
+```
+
+- The table is named **_users_** can be inspected using:
 
 ```mysql
 mysql> SHOW COLUMNS FROM `users`
