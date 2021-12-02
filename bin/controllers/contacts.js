@@ -74,8 +74,10 @@ function remove_contact(req, res) {
 
 
 //UPDATE CONTACT
+
 //TODO: restructure payload to use auth token to remove contact
 //TODO: test update contact end piont 
+
 function update_contact(req, res) {
     //fetch data from pay load
     const { contact_email, contact_name, contact_phone } = req.body.fields
@@ -92,7 +94,7 @@ function update_contact(req, res) {
             //CASE EMAIL && phone
             else if (contact_phone, contact_name) {
                 //check for existing fields from the payload
-                database.promise().query("UPDATE  contacts SET contact_phone = ?, contact_name = ? WHERE contact_email = ?", [contact_phone, contact_name,  contact_email])
+                database.promise().query("UPDATE  contacts SET contact_phone = ?, contact_name = ? WHERE contact_email = ?", [contact_phone, contact_name, contact_email])
                     .then(([rows, fields]) => {
                         return res.send({ message: contact_email + " name and phone successfully updated" })
                     })
