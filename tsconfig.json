@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "rootDir": "bin/utils",
+    "target": "esnext"
+  }
+}
