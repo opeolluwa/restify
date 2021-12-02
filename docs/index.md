@@ -23,10 +23,10 @@ Enter the following command in your terminal
 
 ## Services
 
-- [Web Analytics]()
-- [File manager]()
-- [Blog Management]()
-- [Managing Contacts]()
-- [News letter authoring and management]()
-- [Sending emails using templates]()
-- [User Authentication]()
+- [Web Analytics](./features/analytics.md)
+- [File manager](./features/file-manager.md)
+- [Blog Management](./features/blog.md)
+- [Managing Contacts](./features/contact.md)
+- [News letter authoring and management](./features/news-letter.md)
+- [Sending emails using templates](./features/email.md)
+- [User Authentication](./features/authentication.md)
