@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const salt_round: number = 15;
+const salt_round: number = 13;
 
 //take raw password return hash
 const hash_password = (raw_password: string): String =>

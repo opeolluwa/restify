@@ -1,3 +1,4 @@
+"use strict";
 //load in dependencies
 const json_web_token = require('jsonwebtoken'); // generate token
 require('dotenv').config(); //load in evn variable

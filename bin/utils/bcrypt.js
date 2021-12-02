@@ -1,3 +1,4 @@
+"use strict";
 const bcrypt = require('bcrypt');
 const salt_round = 13;
 //take raw password return hash
