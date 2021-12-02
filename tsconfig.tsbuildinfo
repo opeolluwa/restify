@@ -1,0 +1,349 @@
+{
+  "program": {
+    "fileInfos": {
+      "../../../../usr/share/nodejs/typescript/lib/lib.es5.d.ts": {
+        "version": "7c1b028965a993eef7d465ac1fd75e35cb558372031dea10b5366038f640a182",
+        "signature": "7c1b028965a993eef7d465ac1fd75e35cb558372031dea10b5366038f640a182"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.d.ts": {
+        "version": "44b592f91ebaf4ea12b19daa9daf51a54601c03cd3acd5dd301592d01a8aa88d",
+        "signature": "44b592f91ebaf4ea12b19daa9daf51a54601c03cd3acd5dd301592d01a8aa88d"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2016.d.ts": {
+        "version": "a076876bf7bacf01d3eff29b20d56c616e61e49c92b4379e0867d64d4050ecff",
+        "signature": "a076876bf7bacf01d3eff29b20d56c616e61e49c92b4379e0867d64d4050ecff"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.d.ts": {
+        "version": "a6b9bcaef1d7f6444af29f96244cf46e08749e51d2970de547ce97191605f355",
+        "signature": "a6b9bcaef1d7f6444af29f96244cf46e08749e51d2970de547ce97191605f355"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.d.ts": {
+        "version": "a6eb198a90ce4c218fc6527d7dc4e7487b71745ac05f36fd5c75931b4b7cb68a",
+        "signature": "a6eb198a90ce4c218fc6527d7dc4e7487b71745ac05f36fd5c75931b4b7cb68a"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.d.ts": {
+        "version": "069683a5bc1f0ff273a7d40809b551a0b4fe17b70deb7eadf736452475e4adf4",
+        "signature": "069683a5bc1f0ff273a7d40809b551a0b4fe17b70deb7eadf736452475e4adf4"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.d.ts": {
+        "version": "87154c383b31876f1c74b686ddab7e813ce36db0f3562d84f6aa021e02a9b3ed",
+        "signature": "87154c383b31876f1c74b686ddab7e813ce36db0f3562d84f6aa021e02a9b3ed"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.esnext.d.ts": {
+        "version": "e4eeaaf8caef302f49f69748d16bb330a31d191d5c1cbe7e7c2ede24e555f60e",
+        "signature": "e4eeaaf8caef302f49f69748d16bb330a31d191d5c1cbe7e7c2ede24e555f60e"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.dom.d.ts": {
+        "version": "e2a6b996a0ecae268e90e0a15d8cbf6ba57cb14d72d5462b3bad4fd7ff000567",
+        "signature": "e2a6b996a0ecae268e90e0a15d8cbf6ba57cb14d72d5462b3bad4fd7ff000567"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.dom.iterable.d.ts": {
+        "version": "a5dec9875e62287861b8700c8d14db62d04611d457e084b387951468cbcba5fb",
+        "signature": "a5dec9875e62287861b8700c8d14db62d04611d457e084b387951468cbcba5fb"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.webworker.importscripts.d.ts": {
+        "version": "46b20a85418541653779e6c6b3c1b5fd4b6b33d4ab3d19ebdd348424b0607f30",
+        "signature": "46b20a85418541653779e6c6b3c1b5fd4b6b33d4ab3d19ebdd348424b0607f30"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.scripthost.d.ts": {
+        "version": "855b8297fcd1dc449a4beeccc155c945a3b89e738bde6a56c083b181f0a6085a",
+        "signature": "855b8297fcd1dc449a4beeccc155c945a3b89e738bde6a56c083b181f0a6085a"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "4624517d08f6dd53903549b060c314a065e04222509096c38063b327df3ea951",
+        "signature": "4624517d08f6dd53903549b060c314a065e04222509096c38063b327df3ea951"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "516bd54254229463b14e9bcd065bb3813589e1ef91f150a202a503da31b38d30",
+        "signature": "516bd54254229463b14e9bcd065bb3813589e1ef91f150a202a503da31b38d30"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "ecbc907a9b42436dab7896613e548e0d1c76e6c7e07228418294832baa703462",
+        "signature": "ecbc907a9b42436dab7896613e548e0d1c76e6c7e07228418294832baa703462"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "1c522d50cfcacbf6f0fc475ffec52f608b509448b6b8ccb57b94479b195fe55d",
+        "signature": "1c522d50cfcacbf6f0fc475ffec52f608b509448b6b8ccb57b94479b195fe55d"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "effe615f7edfd363f6d142ea23cf1f65cec9aae4f06cbf16872cac64d3990b8f",
+        "signature": "effe615f7edfd363f6d142ea23cf1f65cec9aae4f06cbf16872cac64d3990b8f"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "0ca606647cf7aa4e365d69763d097e725d958480079014f7cb30a9d5244e283a",
+        "signature": "0ca606647cf7aa4e365d69763d097e725d958480079014f7cb30a9d5244e283a"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "b4a3b009b8256079fcc352de3ddfb5ed770b6046938d111cc2842d729777ecbb",
+        "signature": "b4a3b009b8256079fcc352de3ddfb5ed770b6046938d111cc2842d729777ecbb"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "e55cd239bc1dc69de5791ae2c45ea0d70a57a361017a4c6e342ba42bdd0ef4bd",
+        "signature": "e55cd239bc1dc69de5791ae2c45ea0d70a57a361017a4c6e342ba42bdd0ef4bd"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "81e24ff087a1aa21fc93d465b746fe9c58185a67537502fd90bf388dc85a3a6c",
+        "signature": "81e24ff087a1aa21fc93d465b746fe9c58185a67537502fd90bf388dc85a3a6c"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "bb64bbc331b368e6d6a6ccb3bf8b031add880795d09aac8513b6baf6c559bc5a",
+        "signature": "bb64bbc331b368e6d6a6ccb3bf8b031add880795d09aac8513b6baf6c559bc5a"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "41f93ccce5b8352038208dfefd7c26034e1caae0d3df257c88d457fdd87e144c",
+        "signature": "41f93ccce5b8352038208dfefd7c26034e1caae0d3df257c88d457fdd87e144c"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "da4ee0d8dc5df05bfb708ad5f809b1445408be8b7ba6dae36a902ec094f4c4f0",
+        "signature": "da4ee0d8dc5df05bfb708ad5f809b1445408be8b7ba6dae36a902ec094f4c4f0"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "3d96641f2745a941f6134e2513c193bbbe5ebf71f8c29e45f73da87d159be05b",
+        "signature": "3d96641f2745a941f6134e2513c193bbbe5ebf71f8c29e45f73da87d159be05b"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "661c0d67111048d038099f7be0b13b5b22f9d1f59ca7e73c7c3c5ab20ed1c228",
+        "signature": "661c0d67111048d038099f7be0b13b5b22f9d1f59ca7e73c7c3c5ab20ed1c228"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "17caa3775b6d5d83dc008cf2141a9a3186ac53a01b9db02556ab62571d6a7aad",
+        "signature": "17caa3775b6d5d83dc008cf2141a9a3186ac53a01b9db02556ab62571d6a7aad"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.asyncgenerator.d.ts": {
+        "version": "24f7cf08a979e1b921e6ad2bbc70d64ed9d669240e0b0485333181d8107bba39",
+        "signature": "24f7cf08a979e1b921e6ad2bbc70d64ed9d669240e0b0485333181d8107bba39"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "18fe801f526628a9f6d8ea30cb96af82f1460078caae86d883e1b0b5b0f7cd95",
+        "signature": "18fe801f526628a9f6d8ea30cb96af82f1460078caae86d883e1b0b5b0f7cd95"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.intl.d.ts": {
+        "version": "19f2a06398eaf87f4f51a0300f954c2a74665251cfd3fe719e8953c631ddd38b",
+        "signature": "19f2a06398eaf87f4f51a0300f954c2a74665251cfd3fe719e8953c631ddd38b"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.promise.d.ts": {
+        "version": "2296a1434a53d18ff834c2f9c608b6231a65b5cd4ecdc8a9a6288f95a91e591a",
+        "signature": "2296a1434a53d18ff834c2f9c608b6231a65b5cd4ecdc8a9a6288f95a91e591a"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.regexp.d.ts": {
+        "version": "243dfca4cd5f984918b72ac286044eff866128a7d992d8021c9368c2e2b50601",
+        "signature": "243dfca4cd5f984918b72ac286044eff866128a7d992d8021c9368c2e2b50601"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.array.d.ts": {
+        "version": "8e6641884c996884234bb8bc5b26aea2b5f1adb3697f299e1ff5b132aea4378f",
+        "signature": "8e6641884c996884234bb8bc5b26aea2b5f1adb3697f299e1ff5b132aea4378f"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.object.d.ts": {
+        "version": "f4419501aaa704c24a9f4024957490a8d7783aa8bc1a81081fc64bb48400d5de",
+        "signature": "f4419501aaa704c24a9f4024957490a8d7783aa8bc1a81081fc64bb48400d5de"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.string.d.ts": {
+        "version": "e86f61c8cf7f3a1651c811849ea9aca784b3c8b9532167784063f1b6ba143e20",
+        "signature": "e86f61c8cf7f3a1651c811849ea9aca784b3c8b9532167784063f1b6ba143e20"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.symbol.d.ts": {
+        "version": "48f0d390fa3ef96ff0d20d49eadbd5a801ac55138191211648ad513480a63404",
+        "signature": "48f0d390fa3ef96ff0d20d49eadbd5a801ac55138191211648ad513480a63404"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.bigint.d.ts": {
+        "version": "4a243813ba11cc69df6fb2da907512275a728efb5050efef758338c96abdf6e2",
+        "signature": "4a243813ba11cc69df6fb2da907512275a728efb5050efef758338c96abdf6e2"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.promise.d.ts": {
+        "version": "95b6edae4fc536d86fcd36f06c0200300bc0cabdd03764959952e0db51bbd8eb",
+        "signature": "95b6edae4fc536d86fcd36f06c0200300bc0cabdd03764959952e0db51bbd8eb"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.string.d.ts": {
+        "version": "036b3930f24e95beac7861f34f1f5979552914806b957362d1d28bccd62419db",
+        "signature": "036b3930f24e95beac7861f34f1f5979552914806b957362d1d28bccd62419db"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.symbol.wellknown.d.ts": {
+        "version": "1649bbecdc05d9882ee93e9ba659a380de2ca700afb68d202aeb765bb3e05096",
+        "signature": "1649bbecdc05d9882ee93e9ba659a380de2ca700afb68d202aeb765bb3e05096"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.esnext.intl.d.ts": {
+        "version": "c799367a4032e7b69c739637db52385c4cbd036882952865c43ebcc52ce5cd44",
+        "signature": "c799367a4032e7b69c739637db52385c4cbd036882952865c43ebcc52ce5cd44"
+      },
+      "../../../../usr/share/nodejs/typescript/lib/lib.esnext.full.d.ts": {
+        "version": "9a0a011491735993ed0063f170de5f2bd3a3ea0c547e895bace3d14f250295bf",
+        "signature": "9a0a011491735993ed0063f170de5f2bd3a3ea0c547e895bace3d14f250295bf"
+      },
+      "./bin/utils/bcrypt.ts": {
+        "version": "f820f44d210ea16458f7d307fea267da1749e95d4e2ef622a17cab3b1fd2b361",
+        "signature": "bafe6bd2ef46f1c480660e612871fd015058e8942bb7c9dcebd4eddf168d252a"
+      },
+      "./bin/utils/jwt.ts": {
+        "version": "562cc7b50e6b371061424a213d8d9e7ccf12ff3b835d4f77da5efced3a1f6bfe",
+        "signature": "2fed259a4e636baa37b99b29a3f076f165a7bf07295a14c8a1474d660481d4c2"
+      },
+      "./bin/utils/uuid.ts": {
+        "version": "08a741635c92bbb4426b5144e025f46ee3c69c4e8a9d3608640cc8d9f8d3d0c6",
+        "signature": "ca5dc92f9c34d97c057374e3cf96376305d6eb9048aaae6725d1d0ecbe7d9a24"
+      },
+      "./bin/node_modules/nodejs-email-validation/index.d.ts": {
+        "version": "74f79cafc89591fd29a03ba2b64ae56dd90bafd26872b84936d1b565acf88619",
+        "signature": "74f79cafc89591fd29a03ba2b64ae56dd90bafd26872b84936d1b565acf88619"
+      },
+      "./bin/utils/validate-email.ts": {
+        "version": "0a75426c0762a78f4d1c65a8f2d1b7f8426350834a4b87fd02a66b8734408796",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      }
+    },
+    "options": {
+      "target": 99,
+      "module": 1,
+      "rootDir": "./bin/utils",
+      "composite": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "watch": true,
+      "configFilePath": "./tsconfig.json"
+    },
+    "referencedMap": {
+      "./bin/utils/validate-email.ts": [
+        "./bin/node_modules/nodejs-email-validation/index.d.ts"
+      ]
+    },
+    "exportedModulesMap": {},
+    "semanticDiagnosticsPerFile": [
+      "../../../../usr/share/nodejs/typescript/lib/lib.es5.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2016.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.esnext.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.dom.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.dom.iterable.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.webworker.importscripts.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.scripthost.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.core.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.collection.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.generator.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.iterable.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.promise.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.proxy.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.reflect.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.symbol.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2016.array.include.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.object.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.string.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.intl.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.intl.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.promise.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2018.regexp.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.array.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.object.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.string.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2019.symbol.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.bigint.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.promise.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.string.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.esnext.intl.d.ts",
+      "../../../../usr/share/nodejs/typescript/lib/lib.esnext.full.d.ts",
+      [
+        "./bin/utils/bcrypt.ts",
+        [
+          {
+            "file": "./bin/utils/bcrypt.ts",
+            "start": 15,
+            "length": 7,
+            "messageText": "Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i @types/node`.",
+            "category": 1,
+            "code": 2580
+          },
+          {
+            "file": "./bin/utils/bcrypt.ts",
+            "start": 421,
+            "length": 6,
+            "messageText": "Cannot find name 'module'. Do you need to install type definitions for node? Try `npm i @types/node`.",
+            "category": 1,
+            "code": 2580
+          }
+        ]
+      ],
+      [
+        "./bin/utils/jwt.ts",
+        [
+          {
+            "file": "./bin/utils/jwt.ts",
+            "start": 46,
+            "length": 7,
+            "messageText": "Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i @types/node`.",
+            "category": 1,
+            "code": 2580
+          },
+          {
+            "file": "./bin/utils/jwt.ts",
+            "start": 88,
+            "length": 7,
+            "messageText": "Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i @types/node`.",
+            "category": 1,
+            "code": 2580
+          },
+          {
+            "file": "./bin/utils/jwt.ts",
+            "start": 219,
+            "length": 7,
+            "messageText": "Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i @types/node`.",
+            "category": 1,
+            "code": 2580
+          },
+          {
+            "file": "./bin/utils/jwt.ts",
+            "start": 257,
+            "length": 6,
+            "messageText": "Cannot find name 'module'. Do you need to install type definitions for node? Try `npm i @types/node`.",
+            "category": 1,
+            "code": 2580
+          }
+        ]
+      ],
+      [
+        "./bin/utils/uuid.ts",
+        [
+          {
+            "file": "./bin/utils/uuid.ts",
+            "start": 55,
+            "length": 7,
+            "messageText": "Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i @types/node`.",
+            "category": 1,
+            "code": 2580
+          },
+          {
+            "file": "./bin/utils/uuid.ts",
+            "start": 139,
+            "length": 6,
+            "messageText": "Cannot find name 'module'. Do you need to install type definitions for node? Try `npm i @types/node`.",
+            "category": 1,
+            "code": 2580
+          }
+        ]
+      ],
+      "./bin/node_modules/nodejs-email-validation/index.d.ts",
+      [
+        "./bin/utils/validate-email.ts",
+        [
+          {
+            "file": "./bin/utils/validate-email.ts",
+            "start": 165,
+            "length": 6,
+            "messageText": "Cannot find name 'module'. Do you need to install type definitions for node? Try `npm i @types/node`.",
+            "category": 1,
+            "code": 2580
+          }
+        ]
+      ]
+    ]
+  },
+  "version": "3.8.3"
+}
