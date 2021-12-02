@@ -74,6 +74,8 @@ function remove_contact(req, res) {
 
 
 //UPDATE CONTACT
+//TODO: restructure payload to use auth token to remove contact
+//TODO: test update contact end piont 
 function update_contact(req, res) {
     //fetch data from pay load
     const { contact_email, contact_name, contact_phone } = req.body.fields
