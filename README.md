@@ -18,10 +18,10 @@ but it should well with any other RDMS_
 
 - File manager ![0%](https://progress-bar.dev/0?title=planning)
 - Blog Management ![0%](https://progress-bar.dev/0?title=planning)
-- Managing Contacts ![12%](https://progress-bar.dev/12?title=in+progress)
+- Managing Contacts ![82%](https://progress-bar.dev/12?title=in+progress)
 - News letter authoring and management
 - Sending emails using templates
-- User Authentication
+- User Authentication  ![32%](https://progress-bar.dev/12?title=in+progress)
 - example interface with vue ![60%](https://progress-bar.dev/60?title=in+progress)
 
 
