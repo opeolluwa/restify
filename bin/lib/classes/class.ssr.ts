@@ -1,18 +1,35 @@
-class ssr_database {
+"use strict";
+const database = require("./../../config/config.database");
+console.log(database)
+class SSRender {
     //takes database and object representing database fields name
-    constructor(database: string, ...fields: Array) {
-        const columns = [];
-        for (const elem of fields) {
-            const str = 
-            columns.push(elem)
-        }
+    constructor(database_name: string) {
+        this.database_name = database_name
 
-
-        return columns
     }
+
+    //api to fetch and return data from database
+    render() {
+        //connect to database, 
+        database.promise().query("SELECT * FROM ?", this.database_name)
+            .then(([rows, fields]) => {
+                return res.send(rows);
+            })
+            .catch(error => console.log(error))
+            .then(() => database.end());
+    }
+
+    //update  filed
+    update(ilem_id: any) {
+        return "updated"
+    }
+
+    //dekete item
+    delete(ilem_id: any) {
+        return "deleted"
+    }
+
+
 }
+module.exports = SSRender;
 
-const rx = new ssr_database("rrr", "fgvp9w", "fdu n]n-yy9f", "ybw fd[ '0ywiog")
-console.log(rx);
-
-module.exports = ssr_database

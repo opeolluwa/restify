@@ -1,20 +1,28 @@
 "use strict";
-var ssr_database = /** @class */ (function () {
+const database = require("./../../config/config.database");
+console.log(database);
+class SSRender {
     //takes database and object representing database fields name
-    function ssr_database(database) {
-        var fields = [];
-        for (var _i = 1; _i < arguments.length; _i++) {
-            fields[_i - 1] = arguments[_i];
-        }
-        var columns = [];
-        for (var _a = 0, fields_1 = fields; _a < fields_1.length; _a++) {
-            var elem = fields_1[_a];
-            var str = columns.push(elem);
-        }
-        return columns;
+    constructor(database_name) {
+        this.database_name = database_name;
     }
-    return ssr_database;
-}());
-var rx = new ssr_database("rrr", "fgvp9w", "fdu n]n-yy9f", "ybw fd[ '0ywiog");
-console.log(rx);
-module.exports = ssr_database;
+    //api to fetch and return data from database
+    render() {
+        //connect to database, 
+        database.promise().query("SELECT * FROM ?", this.database_name)
+            .then(([rows, fields]) => {
+            return res.send(rows);
+        })
+            .catch(error => console.log(error))
+            .then(() => database.end());
+    }
+    //update  filed
+    update(ilem_id) {
+        return "updated";
+    }
+    //dekete item
+    delete(ilem_id) {
+        return "deleted";
+    }
+}
+module.exports = SSRender;
