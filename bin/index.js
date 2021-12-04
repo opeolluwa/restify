@@ -5,9 +5,10 @@ const app = express()
 const cors = require('cors')
 
 //routes
-const skills = require('./routes/skills')
+const analytics = require('./routes/analytics')
+// const skills = require('./routes/skills')
 const mails = require('./routes/mails')
-const projects = require('./routes/projects')
+// const projects = require('./routes/projects')
 const contacts = require('./routes/contacts')
 const auth = require('./routes/auth')
 
@@ -15,9 +16,10 @@ const auth = require('./routes/auth')
 //load in routes and cors
 app.use(cors())
 app.use(express.json())
-app.use("/skills", skills)
+app.use("/analytics", analytics)
+// app.use("/skills", skills)
 app.use("/mails", mails)
-app.use("/projects", projects)
+// app.use("/projects", projects)
 app.use("/contacts", contacts)
 app.use("/auth", auth)
 

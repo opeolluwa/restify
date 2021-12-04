@@ -8,15 +8,12 @@ class SSRender {
     //api to fetch and return data from database
     render() {
         //connect to database, 
-        database.promise().query(`SELECT * FROM ${this.database_name}`)
+        database.promise().query("SELECT * FROM ?", this.database_name)
             .then(([rows, fields]) => {
-            return rows;
+            return res.send(rows);
         })
             .catch(error => console.log(error))
             .then(() => database.end());
     }
 }
-
-const project = new SSRender("skills").render()
-console.log(project)
 module.exports = SSRender;

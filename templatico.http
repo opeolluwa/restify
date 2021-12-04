@@ -32,3 +32,24 @@ Content-Type: application/json
     "contact_email": "templatico@mailer.com",
     "contact_phone": "+123456789"
   }
+
+
+###login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+ {
+  "user_email": "", 
+  "user_password":""
+ }
+
+
+
+###lregister
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+ {"user_email": "adefemi-adeoye@outlook.com", 
+ "user_first_name": "adeoye", 
+ "user_last_name": "adefemi",
+ "user_phone":"990022345",
+ "user_password":"opeolluwa"
+ }
