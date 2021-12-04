@@ -28,7 +28,7 @@ function register(req, res) {
 
             //inform user of existence if found
             else {
-                return res.send({ message: user_email + " already exists" })
+                return res.status(409).send({ message: user_email + " already exists" })
             }
         })
         .catch(error => console.log(error))
@@ -67,11 +67,11 @@ function login(req, res) {
             }
             //user  not found,
             else {
-                return res.send({ message: user_email + "not found" })
+                return res.send({ message: user_email + " not found" })
             }
         })
         .catch(error => console.log(error))
-    // .then(() => database.end());
+    // .then(() => database.end())
 }
 //export class 
 module.exports = { register, login }
