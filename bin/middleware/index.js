@@ -7,7 +7,8 @@ module.exports = {
         const { user_email, user_first_name, user_last_name, user_phone, password } = req.body
 
         //!use_email
-        if (!user_email || !email_validation(user_email).validate()) { return res.status(400).send({ message: "please provide a valid mail" }) }
+        //TODO: validate email with module
+        if (!user_email/*  || !email_validation(user_email).validate() */) { return res.status(400).send({ message: "please provide a valid mail" }) }
 
         //!user_first_name
         //TODO: use validator
@@ -33,7 +34,7 @@ module.exports = {
         //fetch data from pay load
         const { user_email, user_password } = req.body
         //!use_email
-        if (!user_email || !email_validation(user_email).validate()) { return res.status(400).send({ message: "invalid mail or password" }) }
+        if (!user_email/*  || !email_validation(user_email).validate() */) { return res.status(400).send({ message: "invalid mail or password" }) }
         if (!user_password) { return res.status(400).send({ message: "invalid email or password" }) }
         next();
     }
