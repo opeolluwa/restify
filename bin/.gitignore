@@ -1,4 +1,4 @@
 #ignore node modules
-bin/node_modules
+node_modules
 
 #ignore script in sandbox
