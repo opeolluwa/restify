@@ -1,27 +1,14 @@
 const express = require('express')
 const router = express.Router()
 const cors = require('cors')
-const { register } = require('../controllers/auth')
+const { register, login } = require('../controllers/auth')
 
 router.use(cors())
 
-//register user
-router.post("/register", register)
 
-//login user
-router.post("/login", (req, res) => {
-
-})
-
-//reset password
-router.post("/reset-password", (req, res) => {
-
-})
-
-//update account details
-router.put("/update", (req, res) => {
-
-})
-
+router.post("/register", register) // register user
+router.post("/login", login) //login user
+ //TODO: update user data
+ //TODO:: reset password
 
 module.exports = router
