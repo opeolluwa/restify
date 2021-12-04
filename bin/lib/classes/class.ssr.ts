@@ -1,11 +1,10 @@
 "use strict";
-const database = require("./../../config/config.database");
-console.log(database)
+const database = require("../../config/config.database")
+
 class SSRender {
     //takes database and object representing database fields name
     constructor(database_name: string) {
         this.database_name = database_name
-
     }
 
     //api to fetch and return data from database
@@ -18,16 +17,16 @@ class SSRender {
             .catch(error => console.log(error))
             .then(() => database.end());
     }
+    //TODO:
+    // //update  filed
+    // update(ilem_id: any) {
+    //     return "updated"
+    // }
 
-    //update  filed
-    update(ilem_id: any) {
-        return "updated"
-    }
-
-    //dekete item
-    delete(ilem_id: any) {
-        return "deleted"
-    }
+    // //dekete item
+    // delete(ilem_id: any) {
+    //     return "deleted"
+    // }
 
 
 }
