@@ -19,9 +19,28 @@ class SSRender {
             .then(() => database.end());
     }
 
+    promised() {
+        return new Promise((resolve, reject) => {
+            //prepare query to get provided fields or all if no field is provided
+            const query = `SELECT ${this.fields.join(",") || "*"} FROM ${this.database_name}`;
+
+            database.query(query, (err, rows, fields) => {
+                if (err) { reject(err) }
+                resolve(rows)
+            })
+
+            database.end()
+        })
+    }
 }
 module.exports = SSRender;
 
-const user = new SSRender("users","user_id", "password")
-const render = user.render()
-console.log(render)
+// const user = new SSRender("users", "user_id", "password", "user_email")
+// const render = user.render()
+// console.log(render)
+
+
+const user = new SSRender("users", "user_id", "password", "user_email")
+const render = user.promised()
+render.then(data => console.log(data)).catch(err => err)
+// console.log(render)
