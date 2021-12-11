@@ -1,5 +1,4 @@
 const database = require("../../config/config.database"); // load in db util
-global.data = null;
 class SSRender {
     //takes database name and  an Array representing database fields to be fetched
     constructor(database_name, ...fields) {
