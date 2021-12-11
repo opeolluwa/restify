@@ -3,17 +3,9 @@ const obj = {
     age: 34,
     sex: 89
 }
+ function uu(a, ...b){
+     b= b.join(",")
+console.log(a, b);
+ }
 
-const arr = Object.keys(obj)
-
-const quest = "?"
-
-const qq = `(${Array.from("?".repeat(arr.length)).join(",")})`
-console.log(arr);
-
-console.log(qq);
-
-
-const fi = {name: 44}
-
-console.log(fi == null);
+ uu(1,2,3,4,5,6,7,8,9,)

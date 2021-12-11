@@ -39,3 +39,12 @@ router.put("/update", (req, res)=>{
     res.send({message: "update skill"})
 })
 module.exports = router
+
+
+
+function uu(name){
+    this.name = name
+}
+
+
+const nn = new uu("nn")
