@@ -8,27 +8,15 @@ class SSRender {
 
     //api to fetch and return data from database using provided database name
     render() {
-        //prepare query to get provided fields or all if no field is provided
-        const query = `SELECT ${this.fields.join(",") || "*"} FROM ${this.database_name}`
-        //connect to database,  fetch data
-        database.promise().query(query)
-            .then(([rows, fields]) => rows)
-            //TODO:: return fetched data
-            .then(fetched_data => { console.log(fetched_data); return fetched_data; })
-            .catch(error => console.log(error))
-            .then(() => database.end());
-    }
-
-    promised() {
         return new Promise((resolve, reject) => {
             //prepare query to get provided fields or all if no field is provided
             const query = `SELECT ${this.fields.join(",") || "*"} FROM ${this.database_name}`;
-
+            //execute DB query
             database.query(query, (err, rows, fields) => {
                 if (err) { reject(err) }
                 resolve(rows)
             })
-
+            //close connection
             database.end()
         })
     }
@@ -40,7 +28,7 @@ module.exports = SSRender;
 // console.log(render)
 
 
-const user = new SSRender("users", "user_id", "password", "user_email")
-const render = user.promised()
+const user = new SSRender("users", "user_id", "password", "user_email", "user_first_name")
+const render = user.render()
 render.then(data => console.log(data)).catch(err => err)
 // console.log(render)
