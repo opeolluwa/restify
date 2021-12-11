@@ -1,6 +1,6 @@
 class Analytics {
     constructor(domain) {
-        //TODO:  get  data from  database
+        //TODO:  get  data from  database using domain name
         this.domain = domain
 
         return {
