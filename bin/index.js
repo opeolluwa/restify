@@ -32,6 +32,17 @@ app.get("/", (req, res) => {
 
 
 
+
+const useragent = require('express-useragent');
+
+app.use(useragent.express());
+app.get('/ua', function(req, res){
+    res.send(req.useragent);
+});
+
+
+
+
 app.listen(PORT, () => {
     console.log(`Templatico API listening on port ${PORT}`)
 });
