@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require('express')
-const PORT = process.env.PORT || 000
+const PORT = process.env.PORT || 5000
 const app = express()
 const cors = require('cors')
 
@@ -11,6 +11,7 @@ const mails = require('./routes/mails')
 // const projects = require('./routes/projects')
 const contacts = require('./routes/contacts')
 const auth = require('./routes/auth')
+// const ssr = require('./routes/ssr')
 
 
 //load in routes and cors
@@ -22,7 +23,7 @@ app.use("/mails", mails)
 // app.use("/projects", projects)
 app.use("/contacts", contacts)
 app.use("/auth", auth)
-
+// app.use("/ssr", ssr)
 
 // create the connection test
 app.get("/", (req, res) => {

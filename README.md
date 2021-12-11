@@ -1,4 +1,4 @@
-# TEMPLATICO :rocket:
+# RESTify :rocket:
 
 
 

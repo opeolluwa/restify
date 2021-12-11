@@ -13,10 +13,13 @@ class SSRender {
         //connect to database, 
         database.promise().query(`SELECT * FROM  ${this.database_name}`)
             .then(([rows, fields]) => rows)
-            .then(data => { val = data; return val })
+            .then(data => { val = data;})
             .catch(error => console.log(error))
             .then(() => database.end());
+
+            console.log(val)
     }
+    
 }
 module.exports = SSRender;
 
