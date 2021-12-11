@@ -1,5 +1,5 @@
 const database = require("../../config/config.database"); // load in db util
-
+global.data = null;
 class SSRender {
     //takes database name and  an Array representing database fields to be fetched
     constructor(database_name, ...fields) {
@@ -14,7 +14,8 @@ class SSRender {
         //connect to database,  fetch data
         database.promise().query(query)
             .then(([rows, fields]) => rows)
-            .then(data => { console.log(data); })
+            //TODO:: return fetched data
+            .then(fetched_data => { console.log(fetched_data); return fetched_data; })
             .catch(error => console.log(error))
             .then(() => database.end());
     }
@@ -22,6 +23,6 @@ class SSRender {
 }
 module.exports = SSRender;
 
-const user = new SSRender("users")
+const user = new SSRender("users","user_id", "password")
 const render = user.render()
 console.log(render)
