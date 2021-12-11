@@ -11,19 +11,17 @@ const mails = require('./routes/mails')
 // const projects = require('./routes/projects')
 const contacts = require('./routes/contacts')
 const auth = require('./routes/auth')
-// const ssr = require('./routes/ssr')
+const ssr = require('./routes/ssr')
 
 
 //load in routes and cors
 app.use(cors())
 app.use(express.json())
 app.use("/analytics", analytics)
-// app.use("/skills", skills)
 app.use("/mails", mails)
-// app.use("/projects", projects)
 app.use("/contacts", contacts)
 app.use("/auth", auth)
-// app.use("/ssr", ssr)
+app.use("/ssr", ssr)
 
 // create the connection test
 app.get("/", (req, res) => {

@@ -1,13 +1,12 @@
 const express = require('express')
 const router = express.Router()
 const cors = require('cors')
+const { ssr_user, ssr_contacts } = require('../controllers/ssr')
 
 router.use(cors())
 
+router.get("/users", ssr_user)
+router.get("/contacts", ssr_contacts)
 
-const SSRender = require('../lib/classes/ssrr.js') //import  utils
 
-const user = new SSRender("users")
-const render = user.render() 
-
-console.log(render) 
+module.exports = router

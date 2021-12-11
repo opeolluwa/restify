@@ -23,8 +23,7 @@ class SSRender {
 }
 module.exports = SSRender;
 
-/*use case
-const user = new SSRender("users", "user_id", "password", "user_email", "user_first_name")
-const render = user.render()
-render.then(data => console.log(data)).catch(err => err)
-*/
+//use case
+// const user = new SSRender("users", "user_id", "password", "user_email", "user_first_name")
+// const render = user.render()
+// render.then(data => console.log(data)).catch(err => err)
