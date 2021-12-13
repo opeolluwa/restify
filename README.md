@@ -15,14 +15,14 @@ but it should well with any other RDMS_
 
 
 ### FEATURES
-- Analytics ![0%](https://progress-bar.dev/0?title=in+progress)
+- Analytics ![100%](https://progress-bar.dev/0?title=processing)
 - File manager ![0%](https://progress-bar.dev/0?title=planning)
 - Blog Management ![0%](https://progress-bar.dev/0?title=planning)
-- Managing Contacts ![82%](https://progress-bar.dev/12?title=almost+done)
+- Managing Contacts ![100%](https://progress-bar.dev/12?title=almost+done)
 - News letter authoring and management ![0%](https://progress-bar.dev/0?title=planning)
 - Sending emails using templates ![0%](https://progress-bar.dev/0?title=planning)
-- User Authentication  ![87%](https://progress-bar.dev/12?title=almost+done)
-- example interface with vue + Veutify ![50%](https://progress-bar.dev/60?title=in+progress)
+- User Authentication  ![100%](https://progress-bar.dev/12?title=almost+done)
+- example interface with vue + Veutify ![50%](https://progress-bar.dev/60?title=processing)
 
 
 
