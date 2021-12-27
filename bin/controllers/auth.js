@@ -54,7 +54,7 @@ function login(req, res) {
                 //data retrieved from database
                 const { user_id, password, user_email, user_first_name } = rows[0];
 
-                //compare red.bo dy.user_password with stored hash
+                //compare req.body.user_password with stored hash
                 if (compare_hash(user_password, password)) {
                     //TODO: add jwt to request header and not body
                     const jwt_token = jwt({ user_id, user_email, user_first_name })

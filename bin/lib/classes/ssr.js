@@ -16,9 +16,11 @@ class SSRender {
                 if (err) { reject(err) }
                 resolve(rows)
             })
-            //close connection
-            database.end()
+           
         })
+        //TODO
+         //close connection
+         database.end()
     }
 }
 module.exports = SSRender;

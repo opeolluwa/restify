@@ -31,7 +31,7 @@ but it should well with any other RDMS_
 Enter the following command in your terminal
 
 ```shell
- git clone https://github.com/opeolluwa/templatico
+ git clone https://github.com/opeolluwa/restify
  cd templatico
  npm install
  npm run dev

@@ -1,11 +1,15 @@
-const obj = {
-    name: "whatever",
-    age: 34,
-    sex: 89
-}
- function uu(a, ...b){
-     b= b.join(",")
-console.log(a, b);
- }
+const express = require('express')
+const PORT = process.env.PORT || 5000
+const app = express()
+const cors = require('cors')
 
- uu(1,2,3,4,5,6,7,8,9,)
+const useragent = require('express-useragent');
+
+app.use(useragent.express());
+
+app.get('/ua', function (req, res) {
+
+    const { os, browser, platform, isMobile, isDesktop, isBot } = req.useragent
+
+    res.send({ os, browser, platform, isMobile, isDesktop, isBot });
+});
