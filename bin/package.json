@@ -1,10 +1,11 @@
 {
-  "name": "portfolio",
+  "name": "oldshelf-api",
   "version": "1.0.0",
   "description": "An extension of nethbooks -- a student companion web app to serve content and study resources to students",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
+    "email-validator": "^2.0.4",
     "express": "^4.17.1",
     "express-useragent": "^1.0.15",
     "express-validator": "^6.13.0",
@@ -31,7 +33,8 @@
     "mysql2": "^2.3.2",
     "nodejs-email-validation": "^1.1.1",
     "nodemailer": "^6.7.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "valid-url": "^1.0.9"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
