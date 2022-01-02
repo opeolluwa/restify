@@ -1,0 +1,19 @@
+{
+  "name": "restify",
+  "version": "0.0.1",
+  "description": "server script  written in [Node.js](https://nodejs.org) using [Express.js](https://expressjs.com) framework, to help developers to quickly scaffold  APIs that can be consumed in web, desktop or mobile application interfaces ",
+  "main": "index.js",
+  "authors": {
+    "name": "Opeoluwa",
+    "email": "adefemiadeoye@yahoo.com"
+  },
+  "repository": "https://github.com/opeolluwa/restify/restify",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}

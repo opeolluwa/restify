@@ -1,37 +1,41 @@
 // load in dependencies
 const database = require("../config/config.database")
-const uuid = require("./../utils/uuid")
+const { v4: uuidv4 } = require('uuid');
 const jwt = require("./../utils/jwt")
 const { hash_password, compare_hash } = require("../utils/bcrypt")
-
+const _ = require('lodash');
 
 //ADD user
-//TODO: Add middle ware to validate user data 
 function register(req, res) {
     //fetch data from pay load
-    const { user_email, user_first_name, user_last_name, user_phone, password } = req.body
+    const { firstname, lastname, email, password } = req.body
 
     //check if user exists
     database.promise()
-        .query("SELECT * FROM users WHERE LOWER(user_email) =?", [user_email])
+        .query("SELECT * FROM user_information WHERE LOWER(email) = ?", [email])
         .then(([rows, fields]) => {
 
             //add user if not exist
-            if (!rows[0]) {
-                database.promise().query("INSERT INTO users (user_id, user_first_name, user_last_name, user_email, user_phone, password)  VALUES (?,?,?,?,?,?)", [uuid, user_first_name, user_last_name, user_email, user_phone, hash_password(password)])
-                    .then(([rows, fields]) => {
-                        return res.send({ message: user_email + " successfully added" })
-                    })
-                    .catch(error => console.log(error))
-                // .then(() => database.end());
+            if (rows[0]) {
+                return res.status(409).send({ message: _.capitalize(email + " already exists") })
+
             }
 
             //inform user of existence if found
             else {
-                return res.status(409).send({ message: user_email + " already exists" })
+                database.promise().query("INSERT INTO user_information (user_id, firstname, lastname, email, password)  VALUES (?,?,?,?,?)", [uuidv4(), firstname, lastname, email, hash_password(password)])
+                    .then(([rows, fields]) => {
+                        return res.send({ message: _.capitalize(email + " successfully added") })
+                    })
+                    .catch(error => {
+                        return res.send({ message: _.capitalize("An error occured<! please retry") })
+
+                    })
+                // .then(() => database.end());
             }
         })
         .catch(error => console.log(error))
+    //REFACTOR :: fix datase throwing error when connection is closed
     // .then(() => database.end());
 }
 
@@ -40,38 +44,49 @@ function register(req, res) {
 
 
 //login user return jwt
-//TODO:add middle ware to validate user data
 function login(req, res) {
-    const { user_email, user_password } = req.body
+    const { email, password } = req.body
 
     //check if user exists
     database.promise()
-        .query("SELECT * FROM users WHERE LOWER(user_email) =?", [user_email])
+        .query("SELECT * FROM user_information WHERE LOWER(email) =?", [email])
         .then(([rows, fields]) => {
 
             //if user is found,  validate data then return data and access token
             if (rows[0]) {
                 //data retrieved from database
-                const { user_id, password, user_email, user_first_name } = rows[0];
+                const { user_id, password: hash, email, firstname } = rows[0];
 
                 //compare req.body.user_password with stored hash
-                if (compare_hash(user_password, password)) {
-                    //TODO: add jwt to request header and not body
-                    const jwt_token = jwt({ user_id, user_email, user_first_name })
-                    return res.send({  user_id, user_email, user_first_name, jwt_token })
+                if (compare_hash(password, hash)) {
+                    //send token if true
+                    const jwt_token = jwt.sign({ user_id, email, firstname })
+                    return res.send({ user_id, email, firstname, jwt_token })
                 }
-                //if data does not match
-                if (!compare_hash(user_password, password)) {
-                    return res.send({ error: "Invalid email or password" })
+                //if data does not match, send error 
+                if (!compare_hash(password, hash)) {
+                    return res.send({ error: _.capitalize("Invalid email or password") })
                 }
             }
-            //user  not found,
+            //user if not found,
             else {
-                return res.send({ message: user_email + " not found" })
+                return res.send({ message: _.capitalize(email + " not found") })
             }
         })
         .catch(error => console.log(error))
+    //REFACTOR :: fix datase throwing error when connection is closed
     // .then(() => database.end())
 }
+
+//update user account
+function reset(req, res) {
+
+}
+
+//logout user, expire token now
+function logout(req, res, next) {
+    
+}
+
 //export class 
-module.exports = { register, login }
+module.exports = { register, login, reset, logout }

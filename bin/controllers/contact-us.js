@@ -1,33 +1,13 @@
-const nodemailer = require("nodemailer");
-const express = require('express')
-const router = express.Router()
-const cors = require('cors')
-require('dotenv').config()
-const database = require("./../config/config.database")
+//load in dependencies
+const nodemailer = require('nodemailer');
+const _ = require('lodash')
 
+function contact_us(req, res, next) {
+    //get the payload
+    const { name, email, subject, message } = req.body
+    res.send({ message: _.capitalize("message sent!") })
 
-router.use(cors())
-
-
-//send route
-router.post('/send', (req, res) => {
-    const { email, name, subject, message } = req.body
-
-    // pass data to node mailer 
-    // store a copy on database
-    //save contact
-    // retuen response 
-
-
-
-    console.log(req.body)
-     res.send({ status: "Message sent!", errors: null, email, name, subject, message})
-})
-
-//return all messsage
-router.get('/all', (req, res) => {
-    return res.send({ message: "get all bro" })
-})
+}
 
 
 
@@ -69,5 +49,4 @@ async function main() {
 main().catch(console.error);
  */
 
-
-module.exports = router
+module.exports = { contact_us }
