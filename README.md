@@ -3,7 +3,8 @@
 
 
 ## Overview
-restify is server script  written in [Node.js](https://nodejs.org) using [Express.js](https://expressjs.com) framework, to help developers to quickly scaffold  APIs that can be consumed in web, desktop or mobile application interfaces 
+
+RESTify is server script  written in [Node.js](https://nodejs.org) using [Express.js](https://expressjs.com) framework, to help developers to quickly scaffold  APIs that can be consumed in web, desktop or mobile application interfaces 
 The project was created with a developer portfolio in mind, but can be put to good use with minor configuration.
 
 
@@ -15,14 +16,14 @@ but it should well with any other RDMS_
 
 
 ### FEATURES
-- Analytics ![0%](https://progress-bar.dev/0?title=in+progress)
-- File manager ![0%](https://progress-bar.dev/0?title=planning)
-- Blog Management ![0%](https://progress-bar.dev/0?title=planning)
-- Managing Contacts ![82%](https://progress-bar.dev/12?title=almost+done)
-- News letter authoring and management ![0%](https://progress-bar.dev/0?title=planning)
-- Sending emails using templates ![0%](https://progress-bar.dev/0?title=planning)
-- User Authentication  ![87%](https://progress-bar.dev/12?title=almost+done)
-- example interface with vue + Veutify ![50%](https://progress-bar.dev/60?title=in+progress)
+- Analytics ![](https://progress-bar.dev/70?title=processing)
+- File manager ![](https://progress-bar.dev/30?title=planning)
+- Blog Management ![](https://progress-bar.dev/30?title=planning)
+- Managing Contacts ![](https://progress-bar.dev/82?title=almost+done)
+- News letter authoring and management ![](https://progress-bar.dev/30?title=planning)
+- Sending emails using templates ![](https://progress-bar.dev/30?title=planning)
+- User Authentication  ![](https://progress-bar.dev/87?title=almost+done)
+- example interface with Vue.js ![](https://progress-bar.dev/50?title=processing)
 
 
 
