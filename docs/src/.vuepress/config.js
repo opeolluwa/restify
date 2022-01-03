@@ -55,6 +55,7 @@ module.exports = {
             '',
             'using-vue',
             'installation',
+            'features',
             'database',
           ]
         }
