@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'RESTify!',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -38,12 +38,12 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Config',
+        text: 'Demo',
         link: '/config/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Github',
+        link: 'https://github.com/opeolluwa/restify'
       }
     ],
     sidebar: {
@@ -54,6 +54,9 @@ module.exports = {
           children: [
             '',
             'using-vue',
+            'installation',
+            'features',
+            'database',
           ]
         }
       ],

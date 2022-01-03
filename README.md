@@ -16,24 +16,14 @@ but it should well with any other RDMS_
 
 
 ### FEATURES
-- Analytics ![](https://progress-bar.dev/70?title=processing)
-- File manager ![](https://progress-bar.dev/30?title=planning)
-- Blog Management ![](https://progress-bar.dev/30?title=planning)
-- Managing Contacts ![](https://progress-bar.dev/82?title=almost+done)
-- News letter authoring and management ![](https://progress-bar.dev/30?title=planning)
-- Sending emails using templates ![](https://progress-bar.dev/30?title=planning)
-- User Authentication  ![](https://progress-bar.dev/87?title=almost+done)
-- example interface with Vue.js ![](https://progress-bar.dev/50?title=processing)
+- Analytics 
+- File manager 
+- Blog Management 
+- Managing Contacts 
+- News letter authoring and management 
+- Sending emails using templates 
+- User Authentication 
 
 
 
-## INSTALLATION
 
-Enter the following command in your terminal
-
-```shell
- git clone https://github.com/opeolluwa/restify
- cd templatico
- npm install
- npm run dev
-```

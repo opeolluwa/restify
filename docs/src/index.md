@@ -1,15 +1,14 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: server script  written in [Node.js](https://nodejs.org) using [Express.js](https://expressjs.com) framework, to help developers to quickly scaffold  APIs that can be consumed in web, desktop or mobile application interfaces 
-actionText: Quick Start →
+tagline: Quickly scaffold RESTful APIs that can be consumed in web, desktop or mobile application interfaces with mi
+actionText: Get Started →
 actionLink: /guide/
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
+  - title: Quick Start
+    details: Get server application preconfigured with [restify-cli]
+  - title: Bring you database
+    details: RESTify! supports both SQL and NOSQL databases
+  - title: Ehnance Productivity
+    details: Bypass writing same program to  handle account verification, authentication,web analytics and more ...
 footer: Made by Opeoluwa with ❤️
 ---
