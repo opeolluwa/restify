@@ -1,48 +1,62 @@
-require('dotenv').config()
-const express = require('express')
-const PORT = process.env.PORT || 5000
-const app = express()
-const cors = require('cors')
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000
 
-//routes
-const analytics = require('./routes/analytics') //analytics
-const contact_us = require('./routes/contact-us') //contact form
-const contacts = require('./routes/contacts') // managing contacts; details and mail
-const auth = require('./routes/auth') // athentication
-const ssr = require('./routes/ssr') // serverside rendering
-const files = require('./routes/search') //search database
-const profile = require("./routes/profile") //user profile
+// //import database
+const database = require("./models")
 
-//load in routes and cors
-app.use(cors())
-app.use(express.json())
-app.use("/analytics", analytics)
-app.use("/contact-us", contact_us)
-app.use("/contacts", contacts)
-app.use('/files', files)
-app.use("/ssr", ssr)
-
-/*
-* endpoints  are
-* POST :: /auth/login {returns jwt}
-* POST :: /auth/sign-up { register user, return "successfully" added || "already exists"}
-* POST :: /auth/reset {end token to user email for password reset}
-*/app.use("/auth", auth);
-
-/*
-* endpoints  are
-* POST :: /profile  {returns user account information}
-* POST :: /profile/update { upate user account information with payload provided}
-*/app.use("/profile", profile);
+//import user authentication routes
+const userAuthentication = require("././routes/user-authentication");
+const  User  = require('./models/User');
 
 
-
-// create the connection test
-app.get("/", (req, res) => {
-    res.send("Ignition started")
+app.get("/select", (req, res) => {
+    res.send("select")
 })
 
 
-app.listen(PORT, () => {
-    console.log(`API listening on port ${PORT}`)
-});
+app.get("/insert", (req, res) => {
+    User.build({
+        firstname: "adeoye",
+        age: 34
+    })
+        .catch((error) => {
+        res.send(error)
+    })
+})
+
+app.get("/register", (req, res, next) => {
+    //get values from fields
+    // const { firstname, lastname, email, password } = req.body
+    //Get user model and create an instance using data fetched from the http request
+    User.create({
+        firstname: "adeoye"
+    })
+        .catch((error) => {
+            if (error) {
+                res.send(error)
+            }
+            else {
+                res.send("success")
+            }
+        })
+})
+
+//sync database
+// app.listen(PORT, () => {
+//     console.log("ignition started on port:" + PORT);
+// })
+
+
+
+database.sequelize.sync().then((req) => {
+    app.listen(PORT, () => {
+        console.log("ignition started on port:" + PORT);
+    })
+}).catch((error) => {
+    console.log(error.message);
+})
+
+
+
+
