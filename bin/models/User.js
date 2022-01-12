@@ -1,44 +1,114 @@
-//import dependencies
-require("dotenv").config()
-const { Sequelize, DataTypes, Model } = require("sequelize")
-
-//instantiate sequelize as database
-const sequelize = new Sequelize({
-    dialect: "mysql",
-    host: process.env.DB_HOST,
-    username: process.env.DB_USER,
-    password: process.env.DB_ACCESS_KEY,
-    database: process.env.DB_SCHEMA
-});
+//load in dependencies
+const sequelizeBcrypt = require('sequelize-bcrypt');
 
 
+//bcrypt options
+const sequelizeBcryptOptions = {
+    field: 'password', // secret field to hash, default: 'password'
+    rounds: 12, // used to generate bcrypt salt, default: 12
+    compare: 'authenticate', // method used to compare secrets, default: 'authenticate'
+}
 
-class User extends Model { }
+
+//create and export user with the following fields {userId, firstName, lastName, email, phone, password}
+module.exports = (sequelize, DataTypes) => {
+    //create user
+    const User = sequelize.define("user", {
+
+        /*
+        * store user id as primary key
+       * generate key with UUID
+       * uuid must be unique and not null
+       */
+        userId: {
+            type: DataTypes.UUID,
+            allowNull: false,
+            defaultValue: DataTypes.UUIDV4,
+            primaryKey: true,
+            unique: true
+        },
 
 
-User.init({
-    // Model attributes are defined here
-    userId: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4 // Or DataTypes.UUIDV1
-    },
-    firstName: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    lastName: {
-        type: DataTypes.STRING
-        // allowNull defaults to true
-    }
-},
-    {
-        // Other model options go here
-        sequelize, // We need to pass the connection instance
-        modelName: 'User', // We need to choose the model name
-        freezeTableName: true // dont rename  table
+        /*
+         * store user firstname
+        * name must not be null
+        */
+        firstName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
+
+
+        /*
+          * store user lastname
+        * name must not be null
+        */
+        lastName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
+
+        /*
+        * store user email,
+       * email must not be null
+       * email must be unique 
+       * email must not be nul
+       */
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            isEmail: true, //validate email
+            validate: {
+                notEmpty: true
+            }
+        },
+
+        /*
+       * store user phone with countru code,
+      * phone may be null
+      * phone must be unique 
+      */
+        phone: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
+        /*
+          * store user hashed password,
+         * password is hashed with bcrypt
+         * password must not be null
+         */
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
     });
+    
+    //TODO: test sequelize-bcrypt plugin
+    // use imported plugin
+    sequelizeBcrypt(User, sequelizeBcryptOptions)
 
-// the defined model is the class itself
-console.log(User === sequelize.models.User);
-sequelize.sync({ force: true });
-console.log("All models were synchronized successfully.");
+    //TODO: remove usage form here
+    /* USAGE 
+    User.create({ email: 'john.doe@example.com', password: 'SuperSecret!' });
+    // { id: 1, email: 'john.doe@example.com', password: '$2a$12$VtyL7j5xx6t/GmmAqy53ZuKJ1nwPox5kHLXDaottN9tIQBsEB3EsW' }
+    
+    const user = await User.findOne({ where: { email: 'john.doe@example.com' } });
+    user.authenticate('WrongPassword!'); // false
+    user.authenticate('SuperSecret!'); // true
+    */
+
+    //export user
+    return User
+}
