@@ -10,7 +10,7 @@ const sequelizeBcryptOptions = {
 }
 
 
-//create and export user with the following fields {userId, firstName, lastName, email, phone, password}
+//create and export "user" table with the following fields {userId, firstName, lastName, email, phone, password}
 module.exports = (sequelize, DataTypes) => {
     //create user
     const User = sequelize.define("user", {
@@ -75,7 +75,7 @@ module.exports = (sequelize, DataTypes) => {
       * phone must be unique 
       */
         phone: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 notEmpty: true
@@ -93,8 +93,9 @@ module.exports = (sequelize, DataTypes) => {
                 notEmpty: true
             }
         },
-    });
-    
+        //dont allow pluralization of table names
+    }, { freezeTableName: true });
+
     //TODO: test sequelize-bcrypt plugin
     // use imported plugin
     sequelizeBcrypt(User, sequelizeBcryptOptions)
