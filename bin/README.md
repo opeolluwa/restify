@@ -1,25 +1,13 @@
-# Profile API
+# RESTify
 
-## Overview
-
-My portfolio API built on node and mysql
-
-## Technoologies used
-
-- Node
-- Express
-- Sequelize
-- MySQL
+A RESTful API template written in Node.js to handle common backend transactions
 
 ## Features
 
-- Admin endpoint
+- User Authentication
+- Mails
+- Admin roles
+- News letter
+- custom Analytics
 
-  - Analytics
-  - Mails
-  - Notification
-  - Managing projects and skills
 
-- Public endpoint
-  - Contact
-  - SSR skills and projects SSR
