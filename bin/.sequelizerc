@@ -1,0 +1,1 @@
+"config":path.resolve("./config", "config.js")
