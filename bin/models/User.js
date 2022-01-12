@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
          * store user firstname
         * name must not be null
         */
-        firstName: {
+        firstname: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
           * store user lastname
         * name must not be null
         */
-        lastName: {
+        lastname: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
