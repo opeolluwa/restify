@@ -1,6 +1,7 @@
 #ignore node modules
-bin/node_modules
-*/.env
+*/node_modules
+.env
+node_modules
 docs/node_modules
 crash
 #ignore script in sandbox
