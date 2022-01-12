@@ -2,4 +2,5 @@
 bin/node_modules
 .env
 docs/node_modules
+crash
 #ignore script in sandbox
