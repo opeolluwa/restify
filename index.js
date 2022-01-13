@@ -2,61 +2,46 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000
 
-// //import database
-const database = require("./models")
+const Sequelize = require("sequelize")
 
-//import user authentication routes
-const userAuthentication = require("././routes/user-authentication");
-const  User  = require('./models/User');
-
-
-app.get("/select", (req, res) => {
-    res.send("select")
+const sequelize = new Sequelize("restify", "sillicone", "", {
+    host: "localhost",
+    dialect: "mysql"
 })
 
+const Student = sequelize.define("student", {
+    firstName: {
+        type: Sequelize.STRING,
+    },
+    lastName: {
+        type: Sequelize.STRING,
+    },
+}, {
+    freezeTableName: true
 
-app.get("/insert", (req, res) => {
-    User.build({
-        firstname: "adeoye",
-        age: 34
-    })
-        .catch((error) => {
-        res.send(error)
-    })
 })
 
-app.get("/register", (req, res, next) => {
-    //get values from fields
-    // const { firstname, lastname, email, password } = req.body
-    //Get user model and create an instance using data fetched from the http request
-    User.create({
-        firstname: "adeoye"
-    })
-        .catch((error) => {
-            if (error) {
-                res.send(error)
-            }
-            else {
-                res.send("success")
-            }
+Student.sync({ force: true })
+    .then(() => {
+        return Student.create({
+            firstName: "opeoluwa",
+            lastName: "adeoye adefemi"
         })
-})
+    }).catch((error) => {
+        console.log("AN ERROR OCCURRED------------------------" + error)
+    })
 
-//sync database
-// app.listen(PORT, () => {
-//     console.log("ignition started on port:" + PORT);
+// cass User.
+
+// database.sequelize.sync().then((req) => {
+
+// }).catch((error) => {
+//     console.log(error.message);
 // })
 
-
-
-database.sequelize.sync().then((req) => {
-    app.listen(PORT, () => {
-        console.log("ignition started on port:" + PORT);
-    })
-}).catch((error) => {
-    console.log(error.message);
+app.listen(PORT, () => {
+    console.log("ignition started on port:" + PORT);
 })
-
 
 
 
