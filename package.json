@@ -1,9 +1,10 @@
 {
-  "name": "profile-api",
-  "version": "0.0.0",
-  "private": true,
+  "name": "restify",
+  "version": "0.1.0",
+  "description": "",
+  "main": "help developer quickly scaffold common back end transactions",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node index.js",
     "dev": "nodemon index.js",
     "deploy": "git push heroku master"
   },
@@ -14,5 +15,26 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.13.0",
     "sequelize-bcrypt": "^1.1.0"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opeolluwa/restify.git"
+  },
+  "keywords": [
+    "Node",
+    "Sequelize",
+    "API",
+    "RESTful",
+    "API",
+    "SQL"
+  ],
+  "author": "Adeoye Adefemi Opeoluwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opeolluwa/restify/issues"
+  },
+  "homepage": "https://github.com/opeolluwa/restify#readme"
 }
