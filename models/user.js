@@ -15,10 +15,10 @@ module.exports = (sequelize, DataTypes) => {
   };
   User.init({
     /*
-           * store user id as primary key
-          * generate key with UUID
-          * uuid must be unique and not null
-          */
+     * store user id as primary key
+    * generate key with UUID
+    * uuid must be unique and not null
+     */
     userId: {
       type: DataTypes.UUID,
       allowNull: false,
@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true
       }
     },
+    //TODO: add password field
   }, {
     sequelize,
     modelName: 'User',
