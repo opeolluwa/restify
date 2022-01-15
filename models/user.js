@@ -83,7 +83,8 @@ module.exports = (sequelize, DataTypes) => {
     //TODO: add password field
   }, {
     sequelize,
-    modelName: 'User',
+    modelName: 'User', //field name in sequelize
+    tableName: "user_information" //table name in users database
   });
   return User;
 };
