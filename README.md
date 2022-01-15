@@ -21,14 +21,14 @@ Clone from GitHub
 ```bash
   git clone https://github.com/restify
   cd  restify 
-  npm.i
+  npm i
 ```
     
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`JWT_KEY`
+`JWT_KEY` 
 `DB_ACCESS_KEY`
 `DB_SCHEMA`
 `DB_USER`
