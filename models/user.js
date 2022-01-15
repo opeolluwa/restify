@@ -1,7 +1,15 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+const sequelizeBcrypt = require('sequelize-bcrypt');
+
+//bcrypt options
+const sequelizeBcryptOptions = {
+  field: 'password', // secret field to hash, default: 'password'
+  rounds: 12, // used to generate bcrypt salt, default: 12
+  compare: 'authenticate', // method used to compare secrets, default: 'authenticate'
+}
+
+//export user model
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -80,11 +88,24 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true
       }
     },
-    //TODO: add password field
+    /*
+   * store user phone with country code,
+   * phone may be null
+   * phone must be unique 
+   */
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+
+    },
   }, {
     sequelize,
     modelName: 'User', //field name in sequelize
-    tableName: "user_information" //table name in users database
+    tableName: "user_information", //table name in users database
+    timestamps: false //dont add timestamp
   });
+  sequelizeBcrypt(User, sequelizeBcryptOptions)
   return User;
 };
+
+
