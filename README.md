@@ -64,7 +64,7 @@ Checkout [demo](demo.md) here
 
 
 ## Support
-### Hi, I'm Opeoluwa! 👋
+**Hi, I'm Opeoluwa! 👋**
 I'm a full stack developer devoted to building community project...
 
 
