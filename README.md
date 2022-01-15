@@ -1,5 +1,5 @@
 
-# Restify
+# RESTify
 
 A RESTful API template, built on Node and SQL to help developer quickly scaffold common back end transactions
 
