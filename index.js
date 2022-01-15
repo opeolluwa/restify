@@ -1,9 +1,13 @@
 //load in dependencies
-const { sequelize } = require("./models");
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 3003
 
+app.use(express.json())
 
-async function main() {
-    await sequelize.sync()
-}
-
-main()
+//import routes
+const __users = require("./routes/user")
+app.use("/users",__users)
+app.listen(PORT, async () => {
+    console.log("ignition started on port:" + PORT);
+})
