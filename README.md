@@ -68,6 +68,6 @@ Checkout [demo](demo.md) here
 I'm a full stack developer devoted to building community project...
 
 
-If you find RESTify helpful, consider [buying me a pizza 🍕](https://getfidia.com/pay/opeolluwa/open-source)
+If you find RESTify helpful, consider [buying me pizza 🍕](https://getfidia.com/pay/opeolluwa/open-source)
 
 
