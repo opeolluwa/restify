@@ -1,5 +1,5 @@
 
-# Restify
+# RESTify
 
 A RESTful API template, built on Node and SQL to help developer quickly scaffold common back end transactions
 
@@ -21,14 +21,14 @@ Clone from GitHub
 ```bash
   git clone https://github.com/restify
   cd  restify 
-  npm.i
+  npm i
 ```
     
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`JWT_KEY`
+`JWT_KEY` 
 `DB_ACCESS_KEY`
 `DB_SCHEMA`
 `DB_USER`
@@ -64,10 +64,10 @@ Checkout [demo](demo.md) here
 
 
 ## Support
-### Hi, I'm Opeoluwa! 👋
+**Hi, I'm Opeoluwa! 👋**
 I'm a full stack developer devoted to building community project...
 
 
-If you find RESTify helpful, consider [buying me a pizza 🍕](https://getfidia.com/pay/opeolluwa/open-source)
+If you find RESTify helpful, consider [buying me pizza 🍕](https://getfidia.com/pay/opeolluwa/open-source)
 
 
