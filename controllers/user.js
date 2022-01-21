@@ -2,6 +2,8 @@
 const { User } = require("./../models")
 require("dotenv").config()
 const jwt = require("jsonwebtoken")
+
+
 //register user 
 async function register(req, res) {
     //get fields from payload
@@ -41,13 +43,20 @@ async function login(req, res) {
     //if the password is valid send token send if not  error
     if (validPassword) {
         // generate and send token back to request 
-        //TODO: remove user data from payload 
-        jwt.sign(user.userId, process.env.JWT_KEY, { algorithm: 'RS256' }, async function (err, token) {
-            return res.send({ token, user });
-        });
+
+        //TODO: remove user password  from token  payload 
+        const token = jwt.sign({ user }, process.env.JWT_KEY, { expiresIn: '1h' });
+        res.send({ token })
+
     }
     else {
         return res.send({ error: true, message: "invalid username or password" });
     }
 }
-module.exports = { register, login }
+
+
+//user profile information
+async function profile(req, res) {
+    //TODO: build user profile end point 
+}
+module.exports = { register, login, profile }
