@@ -7,7 +7,13 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 
-//import routes
+
+/* USER ENDPOINTS : 
+POST :: /user/register
+POST :: /user/login
+GET :: /user/profile 
+*/
+
 const __users = require("./routes/user")
 app.use("/users", __users)
 
