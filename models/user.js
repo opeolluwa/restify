@@ -20,6 +20,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
+    //defined fields not to be returned as json object in case of accessing user profile
+    //  TODO: ascertain that the fields are circulated internally, userId and password are available for internal use
+    toJSON() {
+      return {
+        ...this.get(), userId: undefined, password: undefined
+      }
+    }
   };
   User.init({
     /*
@@ -98,11 +105,12 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
 
     },
+    //TODO: add field to validate user registration 
   }, {
     sequelize,
     modelName: 'User', //field name in sequelize
     tableName: "user_information", //table name in users database
-    // timestamps: false //dont add timestamp cd 
+    timestamps: false //dont add timestamp cd 
   });
   sequelizeBcrypt(User, sequelizeBcryptOptions)
   return User;
