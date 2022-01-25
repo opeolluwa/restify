@@ -69,7 +69,7 @@ module.exports = (sequelize, DataTypes) => {
     platform: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Analytics',
+    modelName: 'AnalyticsDB',
   });
   return Analytics;
 };
