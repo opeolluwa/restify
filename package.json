@@ -5,13 +5,13 @@
   "main": "help developer quickly scaffold common back end transactions",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "deploy": "git push heroku master"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "~4.16.1",
+    "express-useragent": "^1.0.15",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.13.0",
