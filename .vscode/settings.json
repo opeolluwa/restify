@@ -2,7 +2,6 @@
   "cSpell.words": ["Adeoye", "firstname", "lastname"],
   "files.exclude": {
     "*/node_modules": true,
-    "**/.env": true,
     "**/node_modules": true,
     "docs/node_modules": true,
     "**/.crash": true
