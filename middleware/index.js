@@ -1,6 +1,5 @@
 const jwt = require("../lib/jwt")
 
-// TODO: add token validation
 module.exports = {
     //checks if user add token to header and validate token
     validate_auth_token: (req, res, next) => {
@@ -37,7 +36,7 @@ module.exports = {
                 res.status(403).send({ message: "forbidden!" })
 
             }
-            //else fire on
+            //else pass the object to next handler
             const user = jwt.verify(access_token);
             req.user = { user }
             next();
