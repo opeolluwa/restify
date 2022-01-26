@@ -26,8 +26,8 @@ async function register(req, res) {
         const user = await User.create({ firstname, lastname, email, phone, password })
         return res.send({ error: null, message: `${user.email}  successfully added` })
     } catch (error) {
-        // TODO: add generic error message
-        return res.send({ error })
+        // add generic error message on failed request
+        return res.send({ error: "An internal error occurred, please retry after some time." })
     }
 }
 
@@ -50,7 +50,7 @@ async function login(req, res) {
     // const user = await User.findOne({ where: { phone } })
     // const user = await User.findOne({ where: { username } })
 
-    
+
     //validate user password and user data
     const validPassword = user.authenticate(password);
 
@@ -83,4 +83,11 @@ async function profile(req, res) {
     //return user profile information
     return res.send(profile)
 }
-module.exports = { register, login, profile }
+
+//TODO: add update profile information using sequelize insert API, take payload from user and update the fields provided
+function update(req, res) {
+
+}
+
+//export controllers to be used as router middleware
+module.exports = { register, login, profile, update }
