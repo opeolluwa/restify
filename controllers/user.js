@@ -50,13 +50,14 @@ async function login(req, res) {
     // const user = await User.findOne({ where: { phone } })
     // const user = await User.findOne({ where: { username } })
 
+    
     //validate user password and user data
     const validPassword = user.authenticate(password);
 
     //if the password is valid send token send if not  error
     if (validPassword) {
         // generate and send token back to request 
-        const token = jwt.sign({ email }, process.env.JWT_KEY, { expiresIn: '1h' });
+        const token = jwt.sign({ user }, process.env.JWT_KEY, { expiresIn: '1h' });
         return res.send({ token })
 
     }
@@ -67,20 +68,19 @@ async function login(req, res) {
 
 
 //user profile information
- function profile(req, res) {
+async function profile(req, res) {
     /*get user object from decode_jwt middleware,
-      * the fields returned are
-      * {firstname, lastname, email}
-      * get all required fields and then send them back to user
+      * use email from the fields returned to  get all required fields and then send them back to user
       */
     const { user } = req.user;
     const email = user.email
 
-    //get user data from database 
-
-    // const profile = await User.findOne({ where: { email: user.email } })
+    //get user data from database using preferred primary key by uncommenting any of the lines below the next
+    const profile = await User.findOne({ where: { email } })
     // const user = await User.findOne({ where: { phone } })
     // const user = await User.findOne({ where: { username } })
-    return res.send(user)
+
+    //return user profile information
+    return res.send(profile)
 }
 module.exports = { register, login, profile }
