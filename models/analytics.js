@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Analytics extends Model {
+  class AnalyticsDB extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,7 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  Analytics.init({
+  AnalyticsDB.init({
+    name: DataTypes.string,
     pageCount: DataTypes.INTEGER,
     isYaBrowser: DataTypes.INTEGER,
     isAuthoritative: DataTypes.INTEGER,
@@ -64,12 +65,12 @@ module.exports = (sequelize, DataTypes) => {
     isAlamoFire: DataTypes.INTEGER,
     isElectron: DataTypes.INTEGER,
     silkAccelerated: DataTypes.INTEGER,
-    browser: DataTypes.STRING,
-    os: DataTypes.STRING,
-    platform: DataTypes.STRING
+    // browser: DataTypes.STRING,
+    // os: DataTypes.STRING,
+    // platform: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'AnalyticsDB',
   });
-  return Analytics;
+  return AnalyticsDB;
 };
