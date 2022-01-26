@@ -110,7 +110,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User', //field name in sequelize
     tableName: "user_information", //table name in users database
-    timestamps: false //dont add timestamp cd 
+    // timestamps: false //dont add timestamp cd 
   });
   sequelizeBcrypt(User, sequelizeBcryptOptions)
   return User;
