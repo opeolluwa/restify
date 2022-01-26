@@ -85,8 +85,30 @@ async function profile(req, res) {
 }
 
 //TODO: add update profile information using sequelize insert API, take payload from user and update the fields provided
-function update(req, res) {
+async function update(req, res) {
+    //get array of the fields in the payload example => [ "email", "firstname", "lastname",  "phone" ]
+    const fields = Object.keys(req.body)
 
+    //get primary key from payload
+    const { username, email, phone } = req.body
+
+    //get user data from database using preferred primary key 
+    const profile = await User.findOne({ where: { email } })
+    // const user = await User.findOne({ where: { phone } })
+    // const user = await User.findOne({ where: { username } })
+
+    try {
+        //update each field in the payload using provided value
+        fields.forEach(field => {
+            profile[field] = req.body[field]
+        });
+        return res.send("updated")
+    } catch (error) {
+        return res.send({ error: "An internal error occurred, please retry after some time." })
+    }
+    //get provided fields 
+    //use sequelize.set to update them
+    //return success or error message
 }
 
 //export controllers to be used as router middleware
