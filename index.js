@@ -20,36 +20,18 @@ app.get("/api", (req, res) => {
 POST:: /user/login
 GET:: /user/profile
 */const __users = require("./routes/user")
-
-
-
 app.use("/users", __users)
 
 
-//for analytics
-//be sure to have it as the last to make sure named routes are matched first
-app.get("/*", (req, res) => {
-
-    //TODO: create a middleware that will take req.useragent and pass it to database analytics model 
-    /* const Analytics = require("lib/class/analytics.js")
-    app
-    .get("*", (req, res)=>{
-    const analytics = new Analytics(req.useragent)
-    })
-    .post("*", (req, res)=>{
-    const analytics = new Analytics(req.useragent)
-    })
-    .put("*", (req, res)=>{
-    const analytics = new Analytics(req.useragent)
-    })
-    .delete("*", (req, res)=>{
-    const analytics = new Analytics(req.useragent)
-    })
-    */
-
+//for analytics be sure to have it as the last to make sure named routes are matched first
+//match all endpoint and all http verb then pass the payload to database for
+//TODO use universal route matching  app.all("/*", (req, res) => {
+app.all("/", (req, res) => {
+    //TODO: create a middleware that will take req.useragent and pass it to database analytics model I
     //TODO:// create a client script for adding analytics  into client interface that have not interactions with home endpoint eg about us page or home page, user an HTTP verb to make endpoint to ./ route or analytics of the api
     return res.send(req.useragent)
 })
+
 app.listen(PORT, async () => {
     await sequelize.sync()
     console.log("ignition started on port:" + PORT);
