@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   AnalyticsDB.init({
-    name: DataTypes.string,
+    name: DataTypes.STRING,
     pageCount: DataTypes.INTEGER,
     isYaBrowser: DataTypes.INTEGER,
     isAuthoritative: DataTypes.INTEGER,
