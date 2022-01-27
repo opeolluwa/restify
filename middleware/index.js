@@ -28,7 +28,6 @@ module.exports = {
     decode_jwt: (req, res, next) => {
         //get token from validate_auth_token middleware
         const { access_token } = req.token;
-        //   return  res.send(access_token)
         try {
 
             //send unauthorized error if token not found
@@ -38,7 +37,7 @@ module.exports = {
             }
             //else pass the object to next handler
             const user = jwt.verify(access_token);
-            req.user = { user }
+            req.user = user;
             next();
         } catch (error) {
             res.status(403)
