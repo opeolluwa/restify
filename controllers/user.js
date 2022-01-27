@@ -72,8 +72,9 @@ async function profile(req, res) {
     /*get user object from decode_jwt middleware,
       * use email from the fields returned to  get all required fields and then send them back to user
       */
-    const { user } = req.user;
-    const email = user.email
+    const { email } = req.user.user;
+    // const { phone } = req.user.user;
+    // const { username } = req.user.user;
 
     //get user data from database using preferred primary key by uncommenting any of the lines below the next
     const profile = await User.findOne({ where: { email } })
@@ -84,31 +85,35 @@ async function profile(req, res) {
     return res.send(profile)
 }
 
-//TODO: add update profile information using sequelize insert API, take payload from user and update the fields provided
+// update profile information using sequelize insert API, take payload from user and update the fields provided
 async function update(req, res) {
     //get array of the fields in the payload example => [ "email", "firstname", "lastname",  "phone" ]
     const fields = Object.keys(req.body)
 
-    //get primary key from payload
-    const { username, email, phone } = req.body
+    //get the unique id, typically primary key  seen as email, phone or username from the decoded jwt
+    const { email } = req.user.user;
+    // const { phone } = req.user.user;
+    // const { username } = req.user.user;
+
 
     //get user data from database using preferred primary key 
     const profile = await User.findOne({ where: { email } })
     // const user = await User.findOne({ where: { phone } })
     // const user = await User.findOne({ where: { username } })
-
+    let message = ""
     try {
         //update each field in the payload using provided value
         fields.forEach(field => {
+            //TODO: check if email, phone, or username provided already exists send error
             profile[field] = req.body[field]
+            message += `${field} set to ${req.body[field]} \n`
         });
-        return res.send("updated")
+        //save the new information
+        await profile.save();
+        return res.send(message)
     } catch (error) {
         return res.send({ error: "An internal error occurred, please retry after some time." })
     }
-    //get provided fields 
-    //use sequelize.set to update them
-    //return success or error message
 }
 
 //export controllers to be used as router middleware
