@@ -13,5 +13,5 @@ router.post("/login", login)
 router.get("/profile", validate_auth_token, decode_jwt, profile)
 
 //update user profile, validate token from login or refresh first
-router.post("/update", validate_auth_token, decode_jwt, update)
+router.put("/update", validate_auth_token, decode_jwt, update)
 module.exports = router;
