@@ -21,6 +21,12 @@ GET:: /user/profile
 app.use("/users", __users)
 
 
+/*POST:: /user/subscribe
+PUT:: /user/confirm-email
+POST:: /user/unsubscribe
+*/const __newsLetter = require("./routes/newsletter");
+app.use("/news-letter", __newsLetter)
+
 //for analytics be sure to have it as the last to make sure named routes are matched first
 //match all endpoint and all http verb then pass the payload to database for
 //TODO use universal route matching  app.all("/*", (req, res) => {
