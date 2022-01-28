@@ -59,7 +59,6 @@ async function login(req, res) {
         // generate and send token back to request 
         const token = jwt.sign({ user }, process.env.JWT_KEY, { expiresIn: '1h' });
         return res.send({ token })
-
     }
     else {
         return res.send({ error: true, message: "invalid username or password" });
