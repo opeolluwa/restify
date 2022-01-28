@@ -1,5 +1,5 @@
 
-# RESTify
+# RESTify 
 
 A RESTful API template, built on Node and SQL to help developer quickly scaffold common back end transactions
 
@@ -28,11 +28,11 @@ Clone from GitHub
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`JWT_KEY` 
-`DB_ACCESS_KEY`
-`DB_SCHEMA`
-`DB_USER`
-`DB_HOST`
+- `JWT_KEY` => json web token secret key
+- `DB_ACCESS_KEY` => database connection password
+- `DB_SCHEMA` => database name
+- `DB_USER` => database user
+- `DB_HOST` => database host
 
 
 ## Features
@@ -42,7 +42,6 @@ To run this project, you will need to add the following environment variables to
 - Contact mails
 - Account reset
 - Analytics
-- Serverside rendering 
 
 
 ## Contributing
