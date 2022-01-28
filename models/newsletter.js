@@ -14,29 +14,41 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   NewsLetter.init({
-    id: {
-      type: DataTypes.INTEGER
-    },
-
+    //subscriber email
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      isEmail: true, //validate email
+      isEmail: true, //validate email\
+      unique: true,
       validate: {
         notEmpty: true
       }
     },
+    //user subscription id 
     subscriptionId: {
       type: DataTypes.UUID,
-      primaryKey: true
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+      unique: true
     },
+
+    //store email-validation token sent to the client 
+    registrationToken: {
+      type: DataTypes.STRING,
+    },
+
+    //registration date 
+    //TODO: add default init to date 
     date: {
-      type: DataTypes.DATE
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+  
     }
   }, {
     sequelize,
-    modelName: 'NewsLetterSubscriber', //field name in sequelize
-    tableName: "news_letter_subscriber", //table name in users database
+    modelName: 'NewsLetter', //field name in sequelize
+    tableName: "news_letter", //table name in users database
   });
   return NewsLetter;
 };
