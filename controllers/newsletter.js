@@ -38,15 +38,45 @@ async function subscribe(req, res, next) {
 
         // generate and send token back to request 
         const token = jwt.sign({ email, otp }, process.env.JWT_KEY, { expiresIn: '24h' });
-       
-        //TODO: send token as payload to node mailer
+
+        //send token as payload to subscriber for account confirmation
+        async function confirmSubscription() {
+
+            const transporter = nodemailer.createTransport({
+                host: process.env.EMAIL_HOST,
+                port: 2525,
+                auth: {
+                    user: process.env.EMAIL_USER,
+                    pass: process.env.EMAIL_PASS
+                }
+            });
+
+            //change to application name
+            message = {
+                from: "restify@email.com",
+                to: email,
+                subject: "confirm news letter subscription",
+                text: token
+            }
+
+            transporter.sendMail(message, function (err, info) {
+                if (err) {
+                    res.send(err)
+                    res.send({ error: "An internal error occurred, please retry after some time." })
+                } else {
+                    console.log(info);
+                    res.send(info);
+                }
+            })
+        }
+        //exec the sending, send error report if failed
+        confirmSubscription().catch(res.send({ error: "An internal error occurred, please retry after some time." }))
 
         return res.send({ error: null, verify, token, message: `A token was sent to ${subscriber.email}, please input the token to complete the subscription` })
     } catch (error) {
         // add generic error message on failed request
         return res.send({ error: "An internal error occurred, please retry after some time." })
         // return res.send({ error })
-
     }
 
 }
